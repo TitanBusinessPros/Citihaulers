@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citihaulers Tulsa - Professional Moving Services</title>
+    <link rel="icon" type="image/x-icon" href="https://github.com/Best-Businesses/Citihaulers-Tulsa/raw/main/Citihaulers-Logo-T.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Full page background image */
+        body {
+            background: url('https://github.com/Best-Businesses/Citihaulers-Tulsa/raw/main/CH-BG-3.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* Dark overlay for better text readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+        
+        /* Logo at the top - centered and larger */
+        .main-logo {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .main-logo img {
+            height: 180px;
+            width: auto;
+            max-width: 90%;
+        }
+        
+        /* Header button */
+        .header-button {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding-bottom: 20px;
+        }
+        
+        .mailing-btn {
+            background-color: #FF6600;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .mailing-btn:hover {
+            background-color: #e55a00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 102, 0, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #FF6600;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .pictures-btn {
+            background-color: #FF6600;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .pictures-btn i {
+            margin-right: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .pictures-btn:hover {
+            background-color: #e55a00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 102, 0, 0.4);
+        }
+        
+        /* Main Content */
+        .content-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .section-title {
+            color: #000;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: #FF6600;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 40px auto 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: #FF6600;
+            font-weight: 600;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #ddd;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            background-color: #FF6600;
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+        }
+        
+        .feature-box h3 {
+            color: #000;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        /* Contact Form Section */
+        .contact-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contact-form {
+            max-width: 700px;
+            margin: 40px auto 0;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            border-color: #FF6600;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2);
+        }
+        
+        .submit-btn {
+            background-color: #FF6600;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e55a00;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        
+        .footer-column h3 {
+            color: #FF6600;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+        }
+        
+        .contact-info i {
+            color: #FF6600;
+            margin-right: 8px;
+        }
+        
+        /* Centered Facebook icon */
+        .facebook-center {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #3b5998;
+            color: white;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+        
+        .social-icon:hover {
+            background-color: #FF6600;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(255, 102, 0, 0.4);
+        }
+        
+        /* Centered mailing services button at bottom */
+        .mailing-bottom {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Center all headers and paragraphs */
+        h1, h2, h3, h4, h5, h6, p {
+            text-align: center;
+        }
+        
+        /* Make sure the background image is visible */
+        html {
+            height: 100%;
+        }
+        
+        /* Container for centering content */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-logo img {
+                height: 140px;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .footer-column {
+                min-width: 100%;
+                padding: 0 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-logo img {
+                height: 120px;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .feature-box {
+                width: 100%;
+            }
+            
+            .contact-form {
+                padding: 25px;
+            }
+        }
+        
+        /* Special class for centering the Request a Free Quote heading */
+        .quote-heading-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Large Centered Logo -->
+    <div class="main-logo">
+        <img src="https://github.com/Best-Businesses/Citihaulers-Tulsa/raw/main/Citihaulers-Logo-T.png" alt="Citihaulers Tulsa Logo">
+    </div>
+    
+    <!-- Mailing Services Button -->
+    <div class="header-button">
+        <a href="https://www.mailworldofficeok.com/" class="mailing-btn" target="_blank">
+            <i class="fas fa-envelope"></i> Mailing Services
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Over 1,000 Moves With 5-Star Ratings</h2>
+            <p>Veteran owned & Christian movers providing competitive pricing and reliable moving services in Tulsa and surrounding areas. Available 24/7, seven days a week.</p>
+            <a href="https://www.facebook.com/profile.php?id=100065637662897&sk=photos" class="pictures-btn" target="_blank">
+                <i class="fab fa-facebook"></i> Check Out Our Pictures
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Citihaulers Tulsa?</h2>
+            <div class="about-content">
+                <p>With <span class="highlight">over 1,000 moves</span> completed, we are a <span class="highlight">5-star rated moving company</span> known for our professionalism and reliability. Our team of experienced movers ensures your belongings are handled with care and respect.</p>
+                <p>We offer <span class="highlight">competitive pricing</span> without compromising on quality. As a <span class="highlight">Veteran owned & Christian</span> moving company, we value integrity, hard work, and exceptional customer service.</p>
+                <p>Our services are available <span class="highlight">24/7, seven days a week</span>, because we understand that moving needs don't always happen during regular business hours.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h3>Professional Movers</h3>
+                    <p>Our experienced team handles your belongings with the utmost care and efficiency.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Competitive Pricing</h3>
+                    <p>We offer fair and transparent pricing with no hidden fees or surprises.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Availability</h3>
+                    <p>We're available anytime you need us - days, nights, weekends, and holidays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="quote-heading-container">
+                <h2 class="section-title">Request a Free Quote</h2>
+            </div>
+            <p>Contact us today for a free, no-obligation moving estimate. We'll respond within 24 hours.</p>
+            
+            <form class="contact-form" action="https://formsubmit.co/mailworldoffice@gmail.com" method="POST">
+                <!-- FormSubmit configuration with redirect -->
+                <input type="hidden" name="_subject" value="New Moving Inquiry from Citihaulers Website">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://www.mailworldofficeok.com/">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="moving-date">Preferred Moving Date</label>
+                    <input type="date" id="moving-date" name="moving-date" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Moving Details (from/to locations, size of move, etc.)</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Get Free Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            3171 S. 129TH E. Ave., Tulsa, OK, United States, 74134
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            +1 918-313-2890
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            mailworldoffice@gmail.com
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            Available 24/7, Seven Days a Week
+                        </li>
+                    </ul>
+                    
+                    <!-- Centered Facebook Icon -->
+                    <div class="facebook-center">
+                        <a href="https://www.facebook.com/profile.php?id=100065637662897" class="social-icon" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Centered Mailing Services Button at Bottom -->
+            <div class="mailing-bottom">
+                <a href="https://www.mailworldofficeok.com/" class="mailing-btn" target="_blank">
+                    <i class="fas fa-envelope"></i> Visit Our Mailing Services Website
+                </a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="current-year"></span> Citihaulers Tulsa. All rights reserved.</p>
+                <p>Veteran Owned & Christian Moving Company</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Form submission feedback
+        document.querySelector('.contact-form').addEventListener('submit', function() {
+            // FormSubmit will handle the redirect to mailworldofficeok.com
+            console.log('Form submitted. User will be redirected to mailworldofficeok.com');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Ensure background image is visible on all screen sizes
+        window.addEventListener('load', function() {
+            // Set body min-height to ensure background is visible on shorter content
+            const bodyHeight = document.body.scrollHeight;
+            const windowHeight = window.innerHeight;
+            
+            if (bodyHeight < windowHeight) {
+                document.body.style.minHeight = windowHeight + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
